@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo de [Seu Nome]</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>[Seu Nome]</h1>
+        <p>[Seu Cargo ou Profissão]</p>
+    </header>
+    <main>
+        <button class="toggle-btn" onclick="toggleSection('sobre-mim')">Sobre Mim</button>
+        <section id="sobre-mim" class="hidden">
+            <h2>Sobre Mim</h2>
+            <p>[Texto sobre você. Exemplo: Sou um profissional com experiência em...]</p>
+        </section>
+        
+        <button class="toggle-btn" onclick="toggleSection('experiencia')">Experiência Profissional</button>
+        <section id="experiencia" class="hidden">
+            <h2>Experiência Profissional</h2>
+            <ul>
+                <li>
+                    <h3>[Cargo]</h3>
+                    <p>[Nome da Empresa] - [Ano de Início] a [Ano de Término]</p>
+                    <p>[Descrição das responsabilidades e conquistas]</p>
+                </li>
+                <!-- Adicione mais itens conforme necessário -->
+            </ul>
+        </section>
+        
+        <button class="toggle-btn" onclick="toggleSection('educacao')">Educação</button>
+        <section id="educacao" class="hidden">
+            <h2>Educação</h2>
+            <ul>
+                <li>
+                    <h3>[Título do Curso]</h3>
+                    <p>[Nome da Instituição] - [Ano de Conclusão]</p>
+                </li>
+                <!-- Adicione mais itens conforme necessário -->
+            </ul>
+        </section>
+        
+        <button class="toggle-btn" onclick="toggleSection('habilidades')">Habilidades</button>
+        <section id="habilidades" class="hidden">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>[Habilidade 1]</li>
+                <li>[Habilidade 2]</li>
+                <li>[Habilidade 3]</li>
+                <!-- Adicione mais habilidades conforme necessário -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Contato: [Seu Email] | [Seu Telefone]</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo básico para o corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    font-style: italic;
+}
+
+main {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button.toggle-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button.toggle-btn:hover {
+    background: #555;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+function toggleSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section.classList.contains('hidden')) {
+        section.classList.remove('hidden');
+    } else {
+        section.classList.add('hidden');
+    }
+}
+
+
